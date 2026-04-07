@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhabir Privacy Policy</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --border: #e2e8f0;
+      --primary: #0f5db8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(15, 93, 184, 0.08), transparent 26%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    main {
+      width: min(920px, calc(100% - 32px));
+      margin: 40px auto;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      box-shadow: 0 18px 48px rgba(15, 23, 42, 0.08);
+      overflow: hidden;
+    }
+
+    header {
+      padding: 32px 32px 24px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(15, 93, 184, 0.06), rgba(255, 255, 255, 0));
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .brand img {
+      width: 56px;
+      height: 56px;
+      border-radius: 999px;
+      object-fit: cover;
+      border: 1px solid rgba(15, 93, 184, 0.1);
+      background: #fff;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .content {
+      padding: 32px;
+    }
+
+    h2 {
+      margin: 28px 0 10px;
+      font-size: 1.2rem;
+    }
+
+    h3 {
+      margin: 18px 0 8px;
+      font-size: 1rem;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    ul {
+      margin: 0 0 18px;
+      padding-left: 22px;
+    }
+
+    li {
+      margin: 0 0 8px;
+    }
+
+    a {
+      color: var(--primary);
+    }
+
+    .note {
+      margin-top: 28px;
+      padding: 16px 18px;
+      background: #f8fbff;
+      border: 1px solid #dbeafe;
+      border-radius: 14px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="brand">
+        <img src="src/assets/icons/icon-128.png" alt="Muhabir logo">
+        <div>
+          <div style="font-weight:700;color:var(--primary)">Muhabir</div>
+          <div style="color:var(--muted);font-size:0.95rem">Chrome Extension Privacy Policy</div>
+        </div>
+      </div>
+      <h1>Privacy Policy</h1>
+      <p class="subtitle">Last updated: April 7, 2026</p>
+    </header>
+
+    <div class="content">
+      <p>
+        Muhabir is a Chrome extension for correcting and improving Arabic text.
+        This policy explains what data the extension handles and how it is used.
+      </p>
+
+      <h2>What Muhabir does</h2>
+      <p>Muhabir offers two categories of features:</p>
+      <ul>
+        <li>Local Arabic fixing features that run inside the extension and do not require an external AI service.</li>
+        <li>AI-powered side-panel services, such as proofreading, summarizing, simplifying, replying, and adding tashkeel, which require an OpenRouter API key supplied by the user.</li>
+      </ul>
+
+      <h2>Data handled by the extension</h2>
+      <p>Muhabir may handle the following data:</p>
+      <ul>
+        <li>Text that the user explicitly selects, pastes, or submits for processing.</li>
+        <li>The user's OpenRouter API key, if the user chooses to configure it.</li>
+        <li>Local extension preferences such as fix mode, bullet style, selected AI service, theme, and model selection.</li>
+        <li>Temporary metadata required to move selected text from the active page into the side panel.</li>
+      </ul>
+
+      <h2>How data is used</h2>
+      <h3>Local features</h3>
+      <p>When the user uses the local Arabic fixing features, text is processed locally inside the extension.</p>
+
+      <h3>AI-powered services</h3>
+      <p>
+        When the user uses AI-powered services in the side panel, the submitted text is sent to OpenRouter so the requested AI operation can be completed.
+        These requests are made only after the user provides an OpenRouter API key and actively runs the service.
+      </p>
+      <p>Muhabir does not sell the user's text. Muhabir does not use submitted text for advertising.</p>
+
+      <h2>Storage</h2>
+      <p>Muhabir stores certain data locally in Chrome storage, including:</p>
+      <ul>
+        <li>The user’s OpenRouter API key</li>
+        <li>Extension settings and preferences</li>
+        <li>Temporary side-panel state</li>
+      </ul>
+      <p>
+        This data is stored so the extension can function across sessions.
+        The API key is stored locally by the extension and is not uploaded to a Muhabir backend,
+        because Muhabir currently does not operate a production account backend.
+      </p>
+
+      <h2>Third-party services</h2>
+      <p>Muhabir currently integrates with:</p>
+      <ul>
+        <li>OpenRouter: <a href="https://openrouter.ai/" target="_blank" rel="noopener noreferrer">https://openrouter.ai/</a></li>
+      </ul>
+      <p>
+        If the user chooses to use AI-powered services, their text and API request metadata may be handled by OpenRouter under OpenRouter’s own terms and privacy practices.
+      </p>
+
+      <h2>Data sharing</h2>
+      <p>
+        Muhabir does not share user data with third parties except as needed to complete an AI-powered request that the user explicitly initiates through OpenRouter-backed features.
+      </p>
+
+      <h2>User control</h2>
+      <p>Users can:</p>
+      <ul>
+        <li>Avoid AI processing entirely by using local-only features</li>
+        <li>Remove their OpenRouter API key from the extension settings</li>
+        <li>Clear extension storage by removing the extension or resetting local browser data</li>
+      </ul>
+
+      <h2>Contact</h2>
+      <p>For questions about privacy or data handling, use the support or feedback links provided by the extension listing.</p>
+
+      <div class="note">
+        Suggested hosting: GitHub Pages. If this repository is published at
+        <code>https://USERNAME.github.io/REPO/</code>, this page can be used directly as your Chrome Web Store privacy-policy URL.
+      </div>
+    </div>
+  </main>
+</body>
+</html>

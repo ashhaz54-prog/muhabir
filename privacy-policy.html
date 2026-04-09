@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Muhabir Privacy Policy</title>
+  <title>Muhabir Privacy Policy | سياسة خصوصية مُحَبِّر</title>
   <style>
     :root {
       color-scheme: light;
@@ -21,7 +21,7 @@
 
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Tahoma", "Arial", sans-serif;
       background:
         radial-gradient(circle at top right, rgba(15, 93, 184, 0.08), transparent 26%),
         var(--bg);
@@ -30,7 +30,7 @@
     }
 
     main {
-      width: min(920px, calc(100% - 32px));
+      width: min(1000px, calc(100% - 32px));
       margin: 40px auto;
       background: var(--panel);
       border: 1px solid var(--border);
@@ -40,16 +40,18 @@
     }
 
     header {
-      padding: 32px 32px 24px;
+      padding: 32px;
       border-bottom: 1px solid var(--border);
       background: linear-gradient(180deg, rgba(15, 93, 184, 0.06), rgba(255, 255, 255, 0));
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     .brand {
       display: flex;
       align-items: center;
       gap: 14px;
-      margin-bottom: 16px;
     }
 
     .brand img {
@@ -61,24 +63,39 @@
       background: #fff;
     }
 
-    h1 {
-      margin: 0 0 10px;
-      font-size: 2rem;
-      line-height: 1.2;
-    }
-
-    .subtitle {
+    .header-text h1 {
       margin: 0;
-      color: var(--muted);
+      font-size: 1.75rem;
     }
 
-    .content {
+    .header-text p {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+
+    .col-en {
       padding: 32px;
+      border-right: 1px solid var(--border);
+      direction: ltr;
+    }
+
+    .col-ar {
+      padding: 32px;
+      direction: rtl;
+      text-align: right;
     }
 
     h2 {
       margin: 28px 0 10px;
       font-size: 1.2rem;
+      color: var(--primary);
     }
 
     h3 {
@@ -86,31 +103,38 @@
       font-size: 1rem;
     }
 
-    p {
+    p, li {
       margin: 0 0 14px;
+      font-size: 0.95rem;
     }
 
     ul {
       margin: 0 0 18px;
-      padding-left: 22px;
-    }
-
-    li {
-      margin: 0 0 8px;
+      padding-inline-start: 22px;
     }
 
     a {
       color: var(--primary);
+      text-decoration: none;
     }
 
-    .note {
-      margin-top: 28px;
-      padding: 16px 18px;
-      background: #f8fbff;
-      border: 1px solid #dbeafe;
-      border-radius: 14px;
-      color: var(--muted);
-      font-size: 0.95rem;
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+      .col-en {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+      }
+      header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+      }
     }
   </style>
 </head>
@@ -119,85 +143,102 @@
     <header>
       <div class="brand">
         <img src="src/assets/icons/icon-128.png" alt="Muhabir logo">
-        <div>
-          <div style="font-weight:700;color:var(--primary)">Muhabir</div>
-          <div style="color:var(--muted);font-size:0.95rem">Chrome Extension Privacy Policy</div>
+        <div class="header-text" style="text-align: left;">
+          <div style="font-weight:700;color:var(--primary)">Muhabir | مُحَبِّر</div>
+          <h1>Privacy Policy</h1>
+          <p>Last updated: April 7, 2026</p>
         </div>
       </div>
-      <h1>Privacy Policy</h1>
-      <p class="subtitle">Last updated: April 7, 2026</p>
+      <div class="header-text" style="text-align: right;" dir="rtl">
+        <h1>سياسة الخصوصية</h1>
+        <p>آخر تحديث: ٧ أبريل ٢٠٢٦</p>
+      </div>
     </header>
 
-    <div class="content">
-      <p>
-        Muhabir is a Chrome extension for correcting and improving Arabic text.
-        This policy explains what data the extension handles and how it is used.
-      </p>
+    <div class="grid">
+      <div class="col-en">
+        <p>
+          Muhabir is a Chrome extension for correcting and improving Arabic text.
+          This policy explains what data the extension handles and how it is used.
+        </p>
 
-      <h2>What Muhabir does</h2>
-      <p>Muhabir offers two categories of features:</p>
-      <ul>
-        <li>Local Arabic fixing features that run inside the extension and do not require an external AI service.</li>
-        <li>AI-powered side-panel services, such as proofreading, summarizing, simplifying, replying, and adding tashkeel, which require an OpenRouter API key supplied by the user.</li>
-      </ul>
+        <h2>What Muhabir does</h2>
+        <ul>
+          <li>Local Arabic fixing features that run inside the extension and do not require an external AI service.</li>
+          <li>AI-powered side-panel services (Summarizing, Tashkeel, etc.) which require an OpenRouter API key supplied by the user.</li>
+        </ul>
 
-      <h2>Data handled by the extension</h2>
-      <p>Muhabir may handle the following data:</p>
-      <ul>
-        <li>Text that the user explicitly selects, pastes, or submits for processing.</li>
-        <li>The user's OpenRouter API key, if the user chooses to configure it.</li>
-        <li>Local extension preferences such as fix mode, bullet style, selected AI service, theme, and model selection.</li>
-        <li>Temporary metadata required to move selected text from the active page into the side panel.</li>
-      </ul>
+        <h2>Data handled</h2>
+        <ul>
+          <li>Text that the user explicitly selects or submits for processing.</li>
+          <li>The user's OpenRouter API key (stored locally).</li>
+          <li>Local preferences (theme, model selection, etc.).</li>
+        </ul>
 
-      <h2>How data is used</h2>
-      <h3>Local features</h3>
-      <p>When the user uses the local Arabic fixing features, text is processed locally inside the extension.</p>
+        <h2>How data is used</h2>
+        <h3>Local features</h3>
+        <p>Text is processed locally inside the extension. No data is sent to our servers.</p>
 
-      <h3>AI-powered services</h3>
-      <p>
-        When the user uses AI-powered services in the side panel, the submitted text is sent to OpenRouter so the requested AI operation can be completed.
-        These requests are made only after the user provides an OpenRouter API key and actively runs the service.
-      </p>
-      <p>Muhabir does not sell the user's text. Muhabir does not use submitted text for advertising.</p>
+        <h3>AI-powered services</h3>
+        <p>
+          Submitted text is sent to OpenRouter only after the user provides an API key and triggers the service.
+          Muhabir does not sell user text or use it for advertising.
+        </p>
 
-      <h2>Storage</h2>
-      <p>Muhabir stores certain data locally in Chrome storage, including:</p>
-      <ul>
-        <li>The user’s OpenRouter API key</li>
-        <li>Extension settings and preferences</li>
-        <li>Temporary side-panel state</li>
-      </ul>
-      <p>
-        This data is stored so the extension can function across sessions.
-        The API key is stored locally by the extension and is not uploaded to a Muhabir backend,
-        because Muhabir currently does not operate a production account backend.
-      </p>
+        <h2>Storage</h2>
+        <p>
+          Data is stored locally in Chrome storage. The API key is not uploaded to a Muhabir backend as we do not operate one.
+        </p>
 
-      <h2>Third-party services</h2>
-      <p>Muhabir currently integrates with:</p>
-      <ul>
-        <li>OpenRouter: <a href="https://openrouter.ai/" target="_blank" rel="noopener noreferrer">https://openrouter.ai/</a></li>
-      </ul>
-      <p>
-        If the user chooses to use AI-powered services, their text and API request metadata may be handled by OpenRouter under OpenRouter’s own terms and privacy practices.
-      </p>
+        <h2>User control</h2>
+        <ul>
+          <li>Avoid AI processing by using local-only features.</li>
+          <li>Remove your API key from settings at any time.</li>
+          <li>Clear local browser data to reset the extension.</li>
+        </ul>
+      </div>
 
-      <h2>Data sharing</h2>
-      <p>
-        Muhabir does not share user data with third parties except as needed to complete an AI-powered request that the user explicitly initiates through OpenRouter-backed features.
-      </p>
+      <div class="col-ar">
+        <p>
+          "مُحَبِّر" هو ملحق لمتصفح كروم مخصص لتصحيح وتحسين النصوص العربية.
+          توضح هذه السياسة ماهية البيانات التي تتعامل معها الإضافة وكيفية استخدامها.
+        </p>
 
-      <h2>User control</h2>
-      <p>Users can:</p>
-      <ul>
-        <li>Avoid AI processing entirely by using local-only features</li>
-        <li>Remove their OpenRouter API key from the extension settings</li>
-        <li>Clear extension storage by removing the extension or resetting local browser data</li>
-      </ul>
+        <h2>ماذا تفعل الإضافة</h2>
+        <ul>
+          <li>ميزات الإصلاح المحلي التي تعمل داخل الإضافة ولا تتطلب خدمة ذكاء اصطناعي خارجية.</li>
+          <li>خدمات اللوحة الجانبية المعتمدة على الذكاء الاصطناعي (مثل التلخيص، التشكيل، إلخ) والتي تتطلب مفتاح OpenRouter API يضيفه المستخدم بنفسه.</li>
+        </ul>
 
-      <h2>Contact</h2>
-      <p>For questions about privacy or data handling, use the support or feedback links provided by the extension listing.</p>
+        <h2>البيانات التي يتم التعامل معها</h2>
+        <ul>
+          <li>النصوص التي يختارها المستخدم أو يرسلها للمعالجة بشكل صريح.</li>
+          <li>مفتاح OpenRouter API الخاص بالمستخدم (يُخزن محلياً).</li>
+          <li>التفضيلات المحلية (المظهر، اختيار النموذج، إلخ).</li>
+        </ul>
+
+        <h2>كيفية استخدام البيانات</h2>
+        <h3>الميزات المحلية</h3>
+        <p>تتم معالجة النصوص محلياً داخل الإضافة. لا يتم إرسال أي بيانات إلى خوادمنا.</p>
+
+        <h3>خدمات الذكاء الاصطناعي</h3>
+        <p>
+          يتم إرسال النص إلى OpenRouter فقط بعد تزويد المفتاح وتشغيل الخدمة من قبل المستخدم.
+          لا يقوم "مُحَبِّر" ببيع نصوص المستخدمين أو استخدامها للإعلانات.
+        </p>
+
+        <h2>التخزين</h2>
+        <p>
+          تُخزن البيانات محلياً في مساحة تخزين المتصفح. لا يتم رفع مفتاح API إلى خادم خلفي، حيث أننا لا نشغل أي خوادم خلفية حالياً.
+        </p>
+
+        <h2>تحكم المستخدم</h2>
+        <ul>
+          <li>تجنب معالجة الذكاء الاصطناعي عبر استخدام الميزات المحلية فقط.</li>
+          <li>إزالة مفتاح API من إعدادات الإضافة في أي وقت.</li>
+          <li>مسح بيانات المتصفح المحلية لإعادة ضبط الإضافة.</li>
+        </ul>
+      </div>
     </div>
   </main>
 </body>
